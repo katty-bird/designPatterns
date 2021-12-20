@@ -5,6 +5,11 @@ public class ShoppingCartList implements Subject {
 	private ArrayList<ShoppingCart> carts = new ArrayList<ShoppingCart>();
 	private ArrayList<Observer> observers = new ArrayList<Observer>();
 	
+	public void addCart(ShoppingCart cart) {
+		carts.add(cart);
+		notifyObservers(cart);
+	}
+	
 	@Override
     public void registerObserver(Observer observer) {
         observers.add(observer);
@@ -16,9 +21,9 @@ public class ShoppingCartList implements Subject {
     }
 	
 	@Override
-    public void notifyObservers() {
+    public void notifyObservers(ShoppingCart cart) {
         for (Observer observer : observers) {
-            observer.update(carts);
+            observer.update(cart);
         }
     }
 

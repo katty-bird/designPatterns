@@ -38,7 +38,5 @@ public class ShoppingCart {
 		this.brand=brand;
     }
 	
-
-	
 	
 }

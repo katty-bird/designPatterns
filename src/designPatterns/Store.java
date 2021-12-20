@@ -12,4 +12,6 @@ public class Store implements Observer {
 	public ArrayList<ShoppingCart> getCarts() {
 		return carts;
 	}
+	
+	
 }
